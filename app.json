@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "E-Commerce App",
+    "slug": "ecommerce-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourteam.ecommerceapp"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0F0F14"
+      },
+      "package": "com.yourteam.ecommerceapp",
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "La app necesita acceso a tus fotos para subir imágenes de productos.",
+          "cameraPermission": "La app necesita acceso a tu cámara para tomar fotos de productos."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0F0F14",
+          "imageResizeMode": "contain"
+        }
+      ]
+    ],
+    "scheme": "ecommerceapp",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
