@@ -103,6 +103,15 @@ export default function ProfileScreen() {
             </TouchableOpacity>
 
             <TouchableOpacity
+              onPress={() => router.push("/(app)/profile/addresses")}
+              className="bg-surface-card border border-surface-border rounded-xl flex-row items-center px-5 py-4"
+            >
+              <Text className="text-lg mr-3">📍</Text>
+              <Text className="text-white font-medium flex-1">Mis direcciones</Text>
+              <Text className="text-gray-500">›</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
               onPress={() => router.push("/(app)/profile/change-password")}
               className="bg-surface-card border border-surface-border rounded-xl flex-row items-center px-5 py-4"
             >
