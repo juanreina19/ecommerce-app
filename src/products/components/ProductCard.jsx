@@ -36,7 +36,25 @@ export default function ProductCard({ product, onDelete }) {
         <View className="flex-row items-center justify-between mt-3">
           <Text className="text-white text-lg font-bold">{price}</Text>
 
-          <View className="flex-row gap-2">
+          <View className="flex-row gap-2 items-center">
+            {/* Acceso rápido a comprar */}
+            <TouchableOpacity
+              onPress={(e) => {
+                e.stopPropagation?.();
+                router.push({
+                  pathname: "/(app)/orders/create",
+                  params: {
+                    productId:   product.id,
+                    productName: product.name,
+                    price:       product.price,
+                  },
+                });
+              }}
+              className="bg-green-900 border border-green-700 rounded-lg px-3 py-1.5"
+            >
+              <Text className="text-green-400 text-xs font-medium">🛒</Text>
+            </TouchableOpacity>
+
             <TouchableOpacity
               onPress={() => router.push(`/(app)/products/edit/${product.id}`)}
               className="bg-surface-muted border border-surface-border rounded-lg px-3 py-1.5"
