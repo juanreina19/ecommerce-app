@@ -25,16 +25,34 @@ export default function AppLayout() {
       <Tabs.Screen
         name="products"
         options={{
-          title:    "Productos",
+          title: "Productos",
           tabBarIcon: ({ color }) => (
             <Text style={{ color, fontSize: 20 }}>📦</Text>
           ),
         }}
       />
       <Tabs.Screen
+        name="orders"
+        options={{
+          title: "Pedidos",
+          tabBarIcon: ({ color }) => (
+            <Text style={{ color, fontSize: 20 }}>🛍️</Text>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="favorites"
+        options={{
+          title: "Favoritos",
+          tabBarIcon: ({ color }) => (
+            <Text style={{ color, fontSize: 20 }}>❤️</Text>
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="profile"
         options={{
-          title:    "Perfil",
+          title: "Perfil",
           tabBarIcon: ({ color }) => (
             <Text style={{ color, fontSize: 20 }}>👤</Text>
           ),
